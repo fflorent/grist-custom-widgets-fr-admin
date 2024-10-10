@@ -166,5 +166,54 @@
     "published": true,
     "accessLevel": "full",
     "renderAfterReady": true
+  },
+  {
+    "name": "Advanced Charts",
+    "url": "https://gristlabs.github.io/grist-widget/chart/index.html",
+    "widgetId": "@gristlabs/widget-chart",
+    "published": true,
+    "accessLevel": "full",
+    "description": "Go beyond Grist charts, with support for additional chart types and layout/styling options. Powered by Plotly Studio.",
+    "authors": [
+      {
+        "name": "Grist Labs",
+        "url": "https://github.com/gristlabs"
+      }
+    ],
+    "isGristLabsMaintained": true,
+    "lastUpdatedAt": "2024-08-19T11:39:07-04:00"
+  },
+  {
+    "name": "Drop-down Widget",
+    "url": "https://gristlabs.github.io/grist-widget/drop-down/index.html",
+    "widgetId": "@gristlabs/widget-drop-down",
+    "published": true,
+    "accessLevel": "read table",
+    "renderAfterReady": true,
+    "description": "Display a drop-down menu with options from a column.",
+    "authors": [
+      {
+        "name": "Antol Peshkov",
+        "url": "https://github.com/Antol"
+      }
+    ],
+    "isGristLabsMaintained": false,
+    "lastUpdatedAt": "2024-10-09T14:36:40+02:00"
+  },
+  {
+    "name": "JupyterLite Notebook",
+    "url": "https://gristlabs.github.io/grist-widget/jupyterlite/lab/index.html",
+    "widgetId": "@gristlabs/widget-jupyterlite",
+    "published": true,
+    "accessLevel": "read table",
+    "description": "Run custom Python code in JupyterLite, a version of JupyterLab running entirely in the browser.",
+    "authors": [
+      {
+        "name": "Grist Labs",
+        "url": "https://github.com/gristlabs"
+      }
+    ],
+    "isGristLabsMaintained": true,
+    "lastUpdatedAt": "2024-08-18T18:22:13-04:00"
   }
 ]
