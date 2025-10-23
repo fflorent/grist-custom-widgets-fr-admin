@@ -9,20 +9,21 @@ import { UncleanedRecord } from "../../lib/cleanData/types";
 export const callGeoCodeApi = async (
   q: string,
 ): Promise<NormalizedGeocodeResult[]> => {
-  const url = new URL("https://api-adresse.data.gouv.fr/search/");
+  const url = new URL("https://nominatim.openstreetmap.org/search?format=json");
   url.searchParams.set("q", q);
 
   const response = await fetch(url.toString());
   const data = await response.json();
+  await new Promise((resolve) => setTimeout(resolve, 1500)); // There exist a rate-limit of 1 request per second in Nominatim
 
   // @ts-expect-error d in any type
-  return (data.features ?? []).map((d) => {
+  return (data ?? []).map((d) => {
     return {
-      lat: d.geometry.coordinates[1],
-      lng: d.geometry.coordinates[0],
-      address_normalized: d.properties.label,
-      score: d.properties.score,
-      departement: d.properties.context?.split(", ")[1],
+      lat: d.lat,
+      lng: d.lon,
+      address_normalized: d.display_name,
+      score: 0.9,
+      departement: null,
     };
   });
 };
