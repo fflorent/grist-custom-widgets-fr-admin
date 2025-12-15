@@ -25,7 +25,7 @@ export const callGeoCodeApi = async (
       score: 0.9,
       departement: null,
     };
-  });
+  }).slice(0, 1);
 };
 
 export const getGeoCodeResults = async (
